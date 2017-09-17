@@ -1,0 +1,347 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\LiquorDetect.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""afxres.rc""     // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\LiquorDetect.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 202, 59
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 GT-FVHA100"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,12,20,20
+    LTEXT           "GT-FVHA100  1.0 版",IDC_STATIC,44,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2009",IDC_STATIC,44,24,119,8
+    DEFPUSHBUTTON   "确定",IDOK,145,7,50,16,WS_GROUP
+    LTEXT           "技术支持：wenbojing@sina.com 景文博",IDC_STATIC,43,39,145,8
+END
+
+IDD_LIQUORDETECT_DIALOG DIALOGEX 0, 0, 640, 480
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "流感病毒HA自动测量与分析系统（GT-FVHA100）"
+MENU IDR_MENU
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "实时监视",IDC_LIVE,10,339,65,30
+    PUSHBUTTON      "捕获图像",IDC_CAP_IMAGE,10,378,65,30
+    CONTROL         "",IDC_LOW_SLIDER,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,110,345,113,12
+    CONTROL         "",IDC_HIG_SLIDER,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,110,359,113,12
+    PUSHBUTTON      "图像预处理",IDC_EDGE,136,378,65,30
+    CONTROL         "",IDC_PER_CIRCLE,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,286,353,91,12
+    EDITTEXT        IDC_MIN_R,297,377,33,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MAX_R,301,399,33,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "开始检测",IDC_NEGIN_CHECK,338,378,60,30
+    PUSHBUTTON      "标准品拟合",IDC_FIT,418,198,49,24
+    PUSHBUTTON      "待测品计算",IDC_WAIT_TEST_CALCULATE,473,198,49,24
+    DEFPUSHBUTTON   "退出程序",IDC_EXIT,336,439,65,30
+    GROUPBOX        "图像采集区",IDC_STATIC_GRAB,3,3,408,315,BS_CENTER
+    CTEXT           "显示图像",IDC_IMAGE,7,14,400,300,SS_NOTIFY | SS_CENTERIMAGE
+    GROUPBOX        "曲线显示",IDC_STATIC,415,3,221,178,BS_CENTER
+    CTEXT           "显示曲线",IDC_CURVER_FIT,419,13,214,163,SS_CENTERIMAGE
+    GROUPBOX        "数据显示",IDC_STATIC,415,230,221,246,BS_CENTER
+    GROUPBOX        "操作区",IDC_STATIC,3,324,408,97,BS_CENTER
+    GROUPBOX        "状态栏",IDC_STATIC,3,427,408,49,BS_CENTER
+    LTEXT           "",IDC_MESSAGE,8,455,322,20,SS_CENTERIMAGE
+    LTEXT           "低阈值",IDC_STATIC,84,345,27,12,SS_CENTERIMAGE
+    LTEXT           "高阈值",IDC_STATIC,84,359,27,12,SS_CENTERIMAGE
+    CTEXT           "",IDC_LOW_TEXT,223,345,24,12,SS_CENTERIMAGE,WS_EX_STATICEDGE
+    CTEXT           "",IDC_HIG_TEXT,223,359,24,12,SS_CENTERIMAGE,WS_EX_STATICEDGE
+    RTEXT           "圆形度",IDC_STATIC,259,352,25,12,SS_CENTERIMAGE
+    CTEXT           "",IDC_PRECISION,377,352,26,12,SS_CENTERIMAGE,WS_EX_STATICEDGE
+    LTEXT           "最小半径",IDC_STATIC,259,377,34,12,SS_CENTERIMAGE
+    LTEXT           "最大半径",IDC_STATIC,259,397,34,12,SS_CENTERIMAGE
+    GROUPBOX        "预处理",IDC_STATIC,79,334,173,82,BS_CENTER
+    GROUPBOX        "圆环检测",IDC_STATIC,256,334,150,82,BS_CENTER
+    CONTROL         "",IDC_LIST_CTRL,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,420,241,212,230
+    CONTROL         "",IDC_DETECT_PROGRESS,"msctls_progress32",NOT WS_VISIBLE | WS_BORDER,8,440,324,12
+    CTEXT           "预处理",IDC_STATIC,148,332,31,12,SS_CENTERIMAGE
+    CTEXT           "操作区",IDC_STATIC,195,322,28,12,SS_CENTERIMAGE
+    LTEXT           "状态区",IDC_STATIC,196,425,23,12,SS_CENTERIMAGE
+    CTEXT           "扩散环检测",IDC_STATIC,311,332,44,12,SS_CENTERIMAGE
+    CTEXT           "图像显示区",IDC_STATIC,188,1,46,12,SS_CENTERIMAGE
+    CTEXT           "标准品线性回归曲线",IDC_STATIC,488,1,78,12,SS_CENTERIMAGE
+    CTEXT           "检测数据",IDC_STATIC,508,228,38,12,SS_CENTERIMAGE
+    GROUPBOX        "静态",IDC_STATIC,415,184,221,44,BS_CENTER
+    CTEXT           "处理数据",IDC_STATIC,507,183,38,12,SS_CENTERIMAGE
+    PUSHBUTTON      "生成报表",IDC_BTN_PRODUCTREPORT,583,198,49,24
+    PUSHBUTTON      "清空数据",IDC_BTN_EMPTYDATA,528,198,49,24
+    EDITTEXT        IDC_EDIT_LISTCTRL,397,331,33,12,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER | NOT WS_VISIBLE
+END
+
+IDD_SET_LIQUOR DIALOGEX 0, 0, 97, 59
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_LIQUOR,37,12,32,14,ES_CENTER | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "确定",IDOK,24,35,48,14
+    LTEXT           "浓度",IDC_STATIC,16,12,20,14,SS_CENTERIMAGE
+    LTEXT           "%",IDC_STATIC,74,12,12,14,SS_CENTERIMAGE
+END
+
+IDD_CAMERASET_DIALOG DIALOGEX 0, 0, 156, 82
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "相机参数设置"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,53,61,50,14
+    CONTROL         "",IDC_EXPOSURE_SLIDER,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,43,23,107,11
+    CONTROL         "",IDC_GAIN_SLIDER,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,43,45,107,11
+    CTEXT           "曝光时间",IDC_STATIC,9,24,34,13
+    CTEXT           "相机增益",IDC_STATIC,9,45,34,13
+    LTEXT           "",IDC_EXPOSURE_TEXT,98,11,24,11,SS_CENTERIMAGE
+    LTEXT           "",IDC_GAIN_TEXT,98,30,24,11,SS_CENTERIMAGE
+    GROUPBOX        "设置",IDC_STATIC,5,3,145,56,BS_CENTER
+    LTEXT           " 设置",IDC_STATIC,68,3,19,8
+END
+
+IDD_REGISTER_DLG DIALOGEX 0, 0, 170, 71
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "软件注册"
+FONT 9, "Microsoft Sans Serif", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      "注册",IDC_REGISTER_BUTTON,32,56,39,14
+    LTEXT           "注册序列号",IDC_STATIC,14,32,46,9,SS_CENTERIMAGE
+    LTEXT           "用户注册码",IDC_STATIC,14,14,42,9
+    EDITTEXT        IDC_DISKSERIAL,53,13,107,14,NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_REGVALUE,53,32,107,14,ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+    PUSHBUTTON      "取消",2,103,56,39,14
+    GROUPBOX        "注册",IDC_STATIC,7,2,157,50,BS_CENTER
+    LTEXT           "注册",IDC_STATIC,78,2,15,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x9L
+#else
+ FILEFLAGS 0x8L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "FileDescription", "GT-FVHA100"
+            VALUE "FileVersion", "2.3.0.1"
+            VALUE "InternalName", "GT-FVHA100.exe"
+            VALUE "LegalCopyright", " (C) <WENBOJING>。保留所有权利。"
+            VALUE "OriginalFilename", "GT-FVHA100.exe"
+            VALUE "PrivateBuild", "wenbojing"
+            VALUE "ProductName", "GT-FVHA100"
+            VALUE "ProductVersion", "2.3.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 195
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 52
+    END
+
+    IDD_LIQUORDETECT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 633
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 473
+    END
+
+    IDD_SET_LIQUOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 90
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 52
+    END
+
+    IDD_CAMERASET_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 149
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 75
+    END
+
+    IDD_REGISTER_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 64
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+
+IDR_241                 RT_MANIFEST             "XPStyle.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU MENU 
+BEGIN
+    POPUP "文件(&File)"
+    BEGIN
+        MENUITEM "导出数据(&Save)...",              ID_SAVEDATA_MENU
+        MENUITEM "载入数据(&Open)...",              ID_FILE_OPEN
+        MENUITEM "报表生成(&Report)",               ID_REPORT
+        MENUITEM "退出(&Exit)",                   ID_EXIT
+    END
+    POPUP "相机(&Camera)"
+    BEGIN
+        MENUITEM "连接(&Link)",                   ID_CAMERALINK_MENU
+        MENUITEM "设置(&Set)",                    ID_CAMERASET_MENU
+    END
+    POPUP "关于(&About)"
+    BEGIN
+        MENUITEM "注册(&Register)",               ID_REGISTER_MENU
+        MENUITEM "关于(&About)",                  ID_ABOUT_MENU
+    END
+END
+
+IDR_POP_MENU MENU 
+BEGIN
+    POPUP "pop_menu"
+    BEGIN
+        MENUITEM "删除",                          ID_DELETE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 LiquorDetect(&A)..."
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\LiquorDetect.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "afxres.rc"     // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
